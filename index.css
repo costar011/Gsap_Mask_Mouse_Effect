@@ -25,3 +25,25 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.hidden-content {
+  --x: 0px;
+  --y: 0px;
+  --size: 5px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background: rgb(251, 156, 132);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(251, 156, 132, 1) 0%,
+    rgba(240, 102, 128, 1) 50%,
+    rgba(129, 36, 112, 1) 100%,
+  );
+
+  background: -moz-linear-gradient();
+}
