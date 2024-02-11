@@ -42,8 +42,20 @@ p {
     180deg,
     rgba(251, 156, 132, 1) 0%,
     rgba(240, 102, 128, 1) 50%,
-    rgba(129, 36, 112, 1) 100%,
+    rgba(129, 36, 112, 1) 100%
   );
 
-  background: -moz-linear-gradient();
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(251, 156, 132, 1) 0%,
+    rgba(240, 102, 128, 1) 50%,
+    rgba(129, 36, 112, 1) 100%
+  );
+
+  background: linear-gradient(
+    180deg,
+    rgba(251, 156, 132, 1) 0%,
+    rgba(240, 102, 128, 1) 50%,
+    rgba(129, 36, 112, 1) 100%
+  );
 }
