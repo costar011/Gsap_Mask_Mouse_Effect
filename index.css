@@ -58,4 +58,13 @@ p {
     rgba(240, 102, 128, 1) 50%,
     rgba(129, 36, 112, 1) 100%
   );
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fb9c84", endColorstr="#812470", GradientType=1);
+
+  color: var(--bg);
+  --mask: radial-gradient(
+    circle at var(--x) var(--y),
+    black var(--size),
+    transparent 0
+  );
 }
