@@ -67,4 +67,8 @@ p {
     black var(--size),
     transparent 0
   );
+  -webkit-mask-image: var(--mask);
+  mask-image: var(--mask);
+  pointer-events: none;
+  visibility: hidden;
 }
