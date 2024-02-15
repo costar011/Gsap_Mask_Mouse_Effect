@@ -17,3 +17,13 @@ t1.to(".hideen-content", {
 });
 
 let hoveringContent = gsap.utils.toArray("p", content);
+
+hoveringContent.forEach((e) => {
+  e1.addEventListener("mouseenter", () => {
+    t1.restart();
+  });
+
+  e1.addEventListener("mouseleave", () => {
+    t1.restart();
+  });
+})
