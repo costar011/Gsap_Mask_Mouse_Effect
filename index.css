@@ -14,3 +14,19 @@ a:hover {
 .bg {
   background-color: var(--bg);
 }
+
+p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content p {
+  background: -webkit-linear-gradient(45deg, #fa9b8b 0% , #f27481 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hidden-content {
+  --x: 0px;
+  --y: 0px;
+}
