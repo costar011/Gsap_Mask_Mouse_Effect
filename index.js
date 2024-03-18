@@ -16,9 +16,12 @@ t1.to(".hidden-content", {
   ease: "back.out(1.7)",
 });
 
-/*let hoveringContent.forEach((e1) => {
+let hoveringContent.forEach((e1) => {
     e1.addEventListener("mouseenter", () => {
       t1.restart();
-    })
+    });
+    e1.addEventListener("mouseleave", () => {
+      t1.reverse();
+    });
   });
-  */
+
