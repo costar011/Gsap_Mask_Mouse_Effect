@@ -3,11 +3,11 @@ const content = document.querySelector(".content");
 let xTo = gsap.quickTo(".hidden-content", "--x", {
     duration: 0.4,
     ease: "power4.out",
-}),
-yTo = gsap.quickTo(".hidden-content", "--y", {
+  }),
+  yTo = gsap.quickTo(".hidden-content", "--y", {
     duration: 0.4,
     ease: "power4.out",
-});
+  });
 
 let t1 = gsap.timeline({ paused: true });
 t1.to(".hidden-content", {
@@ -20,22 +20,43 @@ t1.to(".hidden-content", {
 let hoveringContent = document.querySelectorAll(".hovering-content");
 
 hoveringContent.forEach((el) => {
-    el.addEventListener("mouseenter", () => {
-      t1.restart();
-    });
-    el.addEventListener("mouseleave", () => {
-      t1.reverse();
-    });
+  el.addEventListener("mouseenter", () => {
+    t1.restart();
+  });
+  el.addEventListener("mouseleave", () => {
+    t1.reverse();
+  });
 });
 
 /****************************************************************
                     Btn Hovering
 ****************************************************************/
 
-
-let btnT1 = gsap.timeline({paused: true});
+let btnT1 = gsap.timeline({ paused: true });
 btnT1.to(".hidden-content", {
   "--size": 20,
   duration: 0.75,
-  ease: "back.out(1.7)"
+  ease: "back.out(1.7)",
 });
+
+/****************************************************************
+          Add Mask on First Mouse Movement
+****************************************************************/
+
+window.addEventListener("mousemove", onFirstMove);
+
+function onFirstMove(e) {
+  window.addEventListener("mousemove", onFirstMove);
+  gsap.set(".hidden-content", { autoAlpha: 1, "--x": e.pageX, "--y": e.pageY });
+
+  window.addEventListener("mousemove", (e) => {
+    yTo(e.pageY);
+    xTo(e.pageX);
+  });
+}
+
+/****************************************************************
+              Only for the preview image
+****************************************************************/
+
+gsap.set(".hidden-content");
