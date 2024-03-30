@@ -59,4 +59,10 @@ function onFirstMove(e) {
               Only for the preview image
 ****************************************************************/
 
-gsap.set(".hidden-content");
+gsap.set(".hidden-content", {
+  autoAlpha: 1,
+  "--x": window.innerWidth / 3,
+  "--y": window.innerHeight / 2,
+});
+
+t1.progress(0.2);
